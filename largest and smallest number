@@ -1,0 +1,12 @@
+3 Write the python program to find the largest and the smallest of some numbers given by the user using arrays.
+
+numbers = [float(x) for x numbersin input("Enter numbers separated by spaces: ").split()]
+largest = numbers[0]
+smallest = numbers[0]
+for num in numbers:
+    if num > largest:
+        largest = num
+    elif num < smallest:
+        smallest = num
+print("Largest number:", largest)
+print("Smallest number:", smallest)
