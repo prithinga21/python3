@@ -1,0 +1,9 @@
+Write a python program to find the sum of elements of a one-dimensional array.
+
+n = int(input("Enter how many values you want to read: "))
+total_sum = 0
+
+for i in range(n):
+    total_sum += int(input("Enter the value of a[{}]: ".format(i)))
+
+print("The sum of array elements =", total_sum)
