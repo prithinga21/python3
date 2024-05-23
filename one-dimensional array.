@@ -1,0 +1,11 @@
+Write a python program to sort an array elements in ascending order of a one-dimensional array.
+
+n = int(input("Enter how many values you want to read: "))
+arr = []
+for i in range(n):
+    arr.append(int(input("Enter the value of a[{}]: ".format(i))))
+arr.sort()
+print("Array sorted in ascending order =", end=" ")
+for num in arr:
+    print(num, end=" ")
+print()
