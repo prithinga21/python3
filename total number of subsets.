@@ -1,0 +1,13 @@
+Write a python program given an array of n distinct elements, count total number of subsets.
+try:
+    n = int(input("Enter array size: "))
+    if n < 1:
+        print("Invalid input")
+    else:
+        print("Enter {} elements:".format(n))
+        arr = list(map(int, input().split()))
+
+        total_subsets = 2 ** n
+        print(total_subsets)
+except ValueError:
+    print("Invalid input")
