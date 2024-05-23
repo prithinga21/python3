@@ -1,0 +1,20 @@
+Write a python program given an array of n numbers. The problem is to move all the 0’s to the end of the array while maintaining the order of the other elements. Only single traversal of the array is required.
+
+try:
+    n = int(input("Enter array size: "))
+    if n < 1:
+        print("Invalid input")
+    else:
+        print("Enter array elements:")
+        arr = [int(x) for x in input().split()]
+        non_zero_index = 0
+        for i in range(n):
+            if arr[i] != 0:
+                arr[non_zero_index] = arr[i]
+                non_zero_index += 1
+        while non_zero_index < n:
+            arr[non_zero_index] = 0
+            non_zero_index += 1
+        print(*arr)
+except ValueError:
+    print("Invalid input")
