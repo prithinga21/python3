@@ -1,0 +1,12 @@
+2 Write a python program to search for an element in an array. Return the position of the user-given element if it is found in the array otherwise display that it is not found.
+
+arr = [int(x) for x in input("Enter elements of the array separated by spaces: ").split()]
+element = int(input("Enter the element to search for: "))
+found = False
+for i in range(len(arr)):
+    if arr[i] == element:
+        print("Element", element, "found at position", i)
+        found = True
+        break
+if not found:
+    print("Element", element, "not found in the array")
