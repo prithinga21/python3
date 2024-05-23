@@ -1,0 +1,21 @@
+Write a python program to find given an array arr[] of size n. Numbers are from 1 to (n-1) in random order.
+
+
+    n = int(input("Enter array size: "))
+    if n < 1:
+        print("Invalid input")
+    else:
+        print("Enter {} array elements:".format(n))
+        arr = list(map(int, input().split()))
+        found = False
+        for i in range(n):
+            if arr[abs(arr[i])] >= 0:
+                arr[abs(arr[i])] = -arr[abs(arr[i])]
+            else:
+                print("The repetitive element:", abs(arr[i]))
+                found = True
+                break
+        if not found:
+            print("Array elements are not repeated")
+except ValueError:
+    print("Invalid input")
