@@ -1,0 +1,13 @@
+Write a python program given two arrays, the task is to calculate the product of max element of first array and min element of second array
+
+try:
+    print("Enter elements of first array:")
+    arr1 = list(map(int, input().split()))
+    print("Enter elements of second array:")
+    arr2 = list(map(int, input().split()))
+    max_element_arr1 = max(arr1)
+    min_element_arr2 = min(arr2)
+    product = max_element_arr1 * min_element_arr2
+    print("The product of max element in first array and min element in second array is:", product)
+except ValueError:
+    print("Invalid input. Please enter integers.")
