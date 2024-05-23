@@ -1,0 +1,14 @@
+Write a python program that initially stores user-provided numbers in an array, displays them, and then inserts a given number at a specified location while also deleting a number from a specified location
+Note:
+Refer to the displayed test cases for better understanding.
+The driver function is already given in the editor.
+
+arr = [int(x) for x in input("Enter numbers separated by spaces: ").split()]
+print("Array:", arr)
+insert_num = int(input("Enter the number to insert: "))
+insert_index = int(input("Enter the index to insert at: "))
+arr.insert(insert_index, insert_num)
+print("Array after insertion:", arr)
+delete_index = int(input("Enter the index to delete: "))
+del arr[delete_index]
+print("Array after deletion:", arr)
