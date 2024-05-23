@@ -1,0 +1,3 @@
+1 Write a python  program to store and display elements of an array.
+arr=[9,8,6,4,1]
+print(arr)
