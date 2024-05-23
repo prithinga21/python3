@@ -1,0 +1,10 @@
+Write a python program to remove duplicate element and print unique value in an array.
+
+arr = [int(x) for x in input().split()]
+unique_values = []
+
+for num in arr:
+    if num not in unique_values:
+        unique_values.append(num)
+
+print(unique_values)
