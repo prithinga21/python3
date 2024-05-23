@@ -1,0 +1,11 @@
+Write a python program to find whether two arrays are same using one-dimensional arrays.
+
+n = int(input("Enter how many values you want to read: "))
+print("For array 'a':")
+a = [int(input("Enter the value of a[{}]: ".format(i))) for i in range(n)]
+print("For array 'b':")
+b = [int(input("Enter the value of b[{}]: ".format(i))) for i in range(n)]
+if a == b:
+    print("Both arrays are equal")
+else:
+    print("Both arrays are not equal")
