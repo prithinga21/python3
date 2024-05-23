@@ -1,0 +1,15 @@
+Write a python program to store the numbers given by the user in an array, and then find the mean, deviation & variance.
+Note: Mean =   mean = Total sum / n
+Variation =\sigma={\sqrt {\frac {\sum(x_{i}-{\mu})^{2}}{N}}}
+Deviation = sqrt(variance);
+
+import math
+numbers = [float(x) for x in input("Enter numbers separated by spaces: ").split()]
+total_sum = sum(numbers)
+n = len(numbers)
+mean = total_sum / n
+variance = sum((x - mean) ** 2 for x in numbers) / n
+deviation = math.sqrt(variance)
+print("Mean:", mean)
+print("Variance:", variance)
+print("Deviation:", deviation)
