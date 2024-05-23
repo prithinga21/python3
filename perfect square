@@ -1,0 +1,20 @@
+Write a python program given n integers, find the largest number is not a perfect square. Print -1 if there is no number that is perfect square
+
+import math
+try:
+    n = int(input("Enter array size: "))
+    if n < 1:
+        print("Invalid input")
+    else:
+        print("Enter {} array elements:".format(n))
+        arr = list(map(int, input().split()))
+        max_not_perfect_square = -1
+        for num in arr:
+            if math.sqrt(num) % 1 != 0 and num > max_not_perfect_square:
+                max_not_perfect_square = num
+        if max_not_perfect_square == -1:
+            print("-1")
+        else:
+            print(max_not_perfect_square)
+except ValueError:
+    print("Invalid input")
