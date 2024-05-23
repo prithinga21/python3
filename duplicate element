@@ -1,0 +1,23 @@
+Write a python program sorted array with duplicate elements and we have to find the index of last duplicate element and print index of it and also print the duplicate element. If no such element found print a message.
+
+  try:
+    n = int(input("Enter array size: "))
+    if n < 1:
+        print("Invalid array size")
+    else:
+        print("Enter sorted array elements:")
+        arr = list(map(int, input().split()))
+        last_duplicate_index = -1
+        last_duplicate_item = None
+        for i in range(n):
+            if i < n - 1 and arr[i] == arr[i + 1]:
+                last_duplicate_index = i + 1
+                last_duplicate_item = arr[i]
+
+        if last_duplicate_index != -1:
+            print("Last index:", last_duplicate_index)
+            print("Last duplicate item:", last_duplicate_item)
+        else:
+            print("No duplicate found")
+except ValueError:
+    print("Invalid array size")
